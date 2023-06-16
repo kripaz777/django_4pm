@@ -32,8 +32,12 @@ class Services(models.Model):
 class Feedback(models.Model):
     name = models.CharField(max_length= 300)
     post = models.CharField(max_length= 300)
-    image = models.ImageField(upload_to='media')
+    # image = models.ImageField(upload_to='media')
     comment = models.TextField()
 
     def __str__(self):
         return self.name
+
+#
+# python manage.py makemigrations
+# python manage.py migrate
