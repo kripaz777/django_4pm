@@ -32,7 +32,7 @@ class Services(models.Model):
 class Feedback(models.Model):
     name = models.CharField(max_length= 300)
     post = models.CharField(max_length= 300)
-    # image = models.ImageField(upload_to='media')
+    image = models.ImageField(upload_to='media',null = True)
     comment = models.TextField()
 
     def __str__(self):
