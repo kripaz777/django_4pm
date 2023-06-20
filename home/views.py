@@ -4,7 +4,7 @@ from .models import *
 def home(request):
     views = {}
     views['services'] = Services.objects.all()
-
+    views['feedbacks'] = Feedback.objects.all()
     return render(request,'index.html',views)
 
 def about(request):
