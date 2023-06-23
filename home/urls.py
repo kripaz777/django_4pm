@@ -9,6 +9,6 @@ urlpatterns = [
     path('pricing', price, name='pricing'),
     path('my_services', services, name='my_services'),
     path('blog_home', blog_home, name='blog_home'),
-    path('blog_single', blog_single, name='blog_single'),
+    path('blog_single/<int:id>', blog_single, name='blog_single'),
 
 ]

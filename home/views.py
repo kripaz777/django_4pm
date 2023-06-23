@@ -42,5 +42,7 @@ def blog_home(request):
     return render(request,'blog-home.html',views)
 
 
-def blog_single(request):
-    return render(request,'blog-single.html')
+def blog_single(request,id):
+    views = {}
+    views['blog_details'] = Blog.objects.filter(id = id)
+    return render(request,'blog-single.html',views)
